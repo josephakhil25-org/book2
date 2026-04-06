@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hareena Book Centre - Best Books & Gifts in Ramanthapur, Hyderabad</title>
+    <meta name="description" content="Premium bookstore and gift shop in Ramanthapur. Bestsellers, stationery, exquisite gifts. Open till 10:30 PM. Call +91 96180 25137">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hareena Book Centre - Hyderabad's Premier Bookstore">
+    <meta property="og:description" content="Curated Books • Exquisite Gifts • Joyful Moments">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1512820790803-83ca3b5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80">
+    <meta property="og:url" content="https://hareenabooks.com">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BookStore",
+        "name": "Hareena Book Centre",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Before Baddhipochamma Temple, Indira Nagar",
+            "addressLocality": "Ramanthapur",
+            "addressRegion": "Telangana",
+            "postalCode": "500013",
+            "addressCountry": "IN"
+        },
+        "telephone": "+919618025137",
+        "openingHours": "Mo-Su 10:00-22:30",
+        "priceRange": "₹"
+    }
+    </script>
+    
+    <style>
+        :root {
+            --charcoal: #1A1A1A;
+            --gold: #D4AF37;
+            --white: #FFFFFF;
+            --cream: #F8F5F0;
+            --rose: #E8D5D9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(26,26,26,0.7), rgba(26,26,26,0.7)),
+                        url('https://images.unsplash.com/photo-1512820790803-83ca3b5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-content h2 {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--charcoal);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--charcoal);
+            transform: translateY(-3px);
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        .section {
+            padding: 120px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-sm {
+            padding: 80px 5%;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--cream);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 500px;
+            background: linear-gradient(45deg, var(--rose), var(--cream)),
+                        url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            border-radius: 20px;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+        }
+
+        /* Collections */
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .collection-card {
+            height: 400px;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .collection-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+        }
+
+        .collection-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+        }
+
+        .collection-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+        }
+
+        .collection-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Location */
+        .location {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        #map {
+            height: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .contact-card {
+            background: var(--white);
+            color: var(--charcoal);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--gold);
+        }
+
+        /* Reviews */
+        .reviews {
+            background: var(--cream);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--gold);
+        }
+
+        .stars {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* CTA Bar */
+        .cta-bar {
+            background: linear-gradient(135deg, var(--gold), #B8942F);
+            padding: 3rem 5%;
+            text-align: center;
+            color: var(--charcoal);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 4rem 5% 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 5%;
+            }
+            
+            .about-grid,
+            .location-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Sticky CTA */
+        .mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--gold);
+            padding: 1rem;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta {
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+            }
+            
+            .mobile-cta .btn {
+                flex: 1;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content animate">
+            <h1>Hyderabad's Premier Bookstore & Gift Haven</h1>
+            <h2>Curated Books • Exquisite Gifts • Joyful Moments</h2>
+            <div class="cta-buttons">
+                <a href="#location" class="btn btn-primary">Visit Us Today</a>
+                <a href="#collections" class="btn btn-secondary">Browse Collection</a>
+            </div>
+            <div class="trust-badges">
+                <span>20+ Years</span>
+                <span>Family Owned</span>
+                <span>Ramanthapur's Favorite</span>
+            </div>
+            <div style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">
+                📍 Ramanthapur, Hyderabad • Open till 10:30 PM
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="about-grid">
+            <div class="about-image"></div>
+            <div class="about-text animate">
+                <h2>More Than a Bookstore—<br>A Community Gathering Place</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Since our doors first opened, Hareena Book Centre has been more than a store—it's a community gathering place for Hyderabad's book lovers and gift seekers.
+                </p>
+                <p style="font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.9;">
+                    From rare finds to bestsellers, stationery that inspires, and gifts that create memories—every visit is special.
+                </p>
+                <p style="font-size: 1.1rem; font-weight: 500; color: var(--gold);">
+                    Visit us before Baddhipochamma Temple, opposite Rajiv Gandhi Statue.
+                </p>
+                <a href="#location" class="btn btn-primary" style="margin-top: 1rem;">Find Us on Map</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="section" id="collections">
+        <h2 style="text-align: center; font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1rem;">Featured Collections</h2>
+        <p style="text-align: center; font-size: 1.2rem; opacity: 0.8; margin-bottom: 4rem;">Discover treasures for every occasion</p>
+        
+        <div class="collections-grid">
+            <div class="collection-card animate">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bestselling Books">
+                <h3>Bestselling Books</h3>
+                <a href="tel:+919618025137" class="btn btn-primary">Shop Now</a>
+            </div>
+            <div class="collection-card animate">
+                <img src="https://images.unsplash.com/photo-1581578731548-81b823378653?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Exquisite Gifts">
+                <h3>Exquisite Gifts</h3>
+                <a href="https://wa.me/919618025137" class="btn btn-primary">Shop Now</a>
+            </div>
+            <div class="collection-card animate">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Stationery">
+                <h3>Stationery & Journals</h3>
+                <a href="tel:+919618025137" class="btn btn-primary">Shop Now</a>
+            </div>
+            <div class="collection-card animate">
+                <img src="https://images.unsplash.com/photo-1531304516302-0eb7f3b9c917?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Children's Books">
+                <h3>Children's Corner</h3>
+                <a href="https://wa.me/919618025137" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section reviews">
+        <h2 style="text-align: center; font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1rem;">What Our Customers Say</h2>
+        <div class="reviews-grid">
+            <div class="review-card animate">
+                <div class="stars">★★★★★</div>
+                <p>"Best gift shop in Ramanthapur! Found the perfect birthday gift."</p>
+                <div style="font-weight: 600; margin-top: 1rem;">— Priya S.</div>
+            </div>
+            <div class="review-card animate">
+                <div class="stars">★★★★★</div>
+                <p>"Amazing book collection. Family-friendly atmosphere."</p>
+                <div style="font-weight: 600; margin-top: 1rem;">— Ramesh K.</div>
+            </div>
+            <div class="review-card animate">
+                <div class="stars">★★★★★</div>
+                <p>"Stationery selection is outstanding!"</p>
+                <div style="font-weight: 600; margin-top: 1rem;">— Anjali R.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="section location" id="location">
+        <div class="location-content">
+            <div>
+                <h2 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 2rem; color: var(--white);">Visit Us Today</h2>
+                <p style="font-size: 1.3rem; opacity: 0.95; margin-bottom: 2rem; max-width: 600px;">
+                    Before Baddhipochamma Temple, opposite Rajiv Gandhi Statue lane.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://wa.me/919618025137" class="btn btn-primary">WhatsApp Us</a>
+                    <a href="tel:+919618025137" class="btn btn-secondary" style="background: var(--white); color: var(--charcoal);">Call Now</a>
+                </div>
+            </div>
+            
+            <div class="contact-card animate">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24
